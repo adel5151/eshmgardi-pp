@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qeshmi/screens/tours_page.dart';
 import 'screens/blog_page.dart';
 import 'screens/home_page.dart';
 // import 'screens/tours_page.dart';
@@ -14,9 +15,9 @@ int _currentIndex = 0;
 
 final screens = [
   HomePage(),
-  BlogPage(),
+  ToursPage(),
   ListingsPage(),
-  Text('More'),
+  BlogPage(),
 ];
 
 class _BottomNavigationGlobalState extends State<BottomNavigationGlobal> {
