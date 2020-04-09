@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qeshmi/common/constants.dart';
-import 'package:qeshmi/screens/home_page.dart';
 
 class ToursPage extends StatelessWidget {
   @override
@@ -12,7 +11,7 @@ class ToursPage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
         ),
-        bottomNavigationBar: BottomNavigationGlobal(),
+        // bottomNavigationBar: BottomNavigationGlobal(),
       ),
     );
   }
