@@ -5,7 +5,10 @@ class BlogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Blog'),
+      child: Text(
+        'Blog',
+        style: kTextStyleHomePage,
+      ),
     );
   }
 }
