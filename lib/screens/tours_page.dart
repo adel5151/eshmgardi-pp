@@ -1,99 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:qeshmi/common/reusable_icon_box.dart';
-import 'package:qeshmi/common/constants.dart';
+import 'package:qeshmi/common/reusable_card.dart';
+import 'package:qeshmi/common/custom_title_for_pages.dart';
 
 class ToursPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        children: <Widget>[
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: CustomTitleForPages(
+            titleName: 'جزیره قشم و هرمز',
+            subTitleName: 'تورهای گشت',
+          ),
+        ),
+        Expanded(
+            flex: 3,
+            child: GridView.count(
+              childAspectRatio: 2 / 3,
+              crossAxisCount: 2,
+              padding: EdgeInsets.all(10.0),
+              mainAxisSpacing: 35.0,
+              crossAxisSpacing: 15.0,
               children: <Widget>[
-                Text(
-                  'تورهای گشت',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 22.0,
-                    fontFamily: 'iranyekan',
-                    fontWeight: FontWeight.w600,
-                  ),
+                ImageTextOverlay(
+                  tourName: 'ویژه قشم',
+                  tourImage: 'assets/images/starvalley.jpg',
                 ),
-                SizedBox(height: 15.0),
-                Text(
-                  'جزیره قشم و هرمز',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontFamily: 'iranyekan',
-                    fontWeight: FontWeight.w600,
-                  ),
+                ImageTextOverlay(
+                  tourName: 'جزیره هرمز',
+                  tourImage: 'assets/images/hormoz.jpg',
+                ),
+                ImageTextOverlay(
+                  tourName: 'جزیره هنگام',
+                  tourImage: 'assets/images/hengam.jpg',
+                ),
+                ImageTextOverlay(
+                  tourName: 'نیم روزی قشم',
+                  tourImage: 'assets/images/starvalley2.jpg',
                 ),
               ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      // setState(() {
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(builder: (context) => BlogPage()),
-                      // );
-                      // });
-                    },
-                    child: ReusableIconBox(
-                      image: Image.asset(
-                        'assets/images/blog.png',
-                        scale: 5.0,
-                      ),
-                      title: 'راهنمای سفر',
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ReusableIconBox(
-                    image: Image.asset(
-                      'assets/images/tour.png',
-                      scale: 5.0,
-                    ),
-                    title: 'تور گشت',
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: ReusableIconBox(
-                    image: Image.asset(
-                      'assets/images/greek.png',
-                      scale: 5.0,
-                    ),
-                    title: 'جاهای دیدنی',
-                  ),
-                ),
-                Expanded(
-                  child: ReusableIconBox(
-                    image: Image.asset(
-                      'assets/images/architecture.png',
-                      scale: 5.0,
-                    ),
-                    title: 'مراکز خرید',
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+            ))
+      ],
     );
   }
 }

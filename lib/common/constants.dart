@@ -19,3 +19,15 @@ const kTextBottomNavigationBar = TextStyle(
   fontSize: 14.0,
   fontWeight: FontWeight.w500,
 );
+
+const kSubtitleTextStyle = TextStyle(
+  fontSize: 22.0,
+  fontFamily: 'iranyekan',
+  fontWeight: FontWeight.w600,
+);
+
+const kTitleTextStyle = TextStyle(
+  fontSize: 30.0,
+  fontFamily: 'iranyekan',
+  fontWeight: FontWeight.w600,
+);

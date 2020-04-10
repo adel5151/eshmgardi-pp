@@ -9,7 +9,7 @@ class _ListingsPageState extends State<ListingsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Listings'),
+      child: Center(child: Text('Listings Page')),
     );
   }
 }

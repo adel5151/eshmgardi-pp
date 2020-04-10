@@ -16,8 +16,8 @@ int _currentIndex = 0;
 final screens = [
   HomePage(),
   ToursPage(),
-  ListingsPage(),
   BlogPage(),
+  ListingsPage(),
 ];
 
 class _BottomNavigationGlobalState extends State<BottomNavigationGlobal> {
